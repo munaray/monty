@@ -51,51 +51,36 @@ typedef struct instruction_s
 	char *opcode;
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
-char *_realloc(char *ptr, unsigned int old_size, unsigned int new_size);
-ssize_t getstdin(char **lineptr, int file);
-char  *clean_line(char *content);
-/* void f_push(stack_t **head, unsigned int number);
-void f_pall(stack_t **head, unsigned int number);
-void f_pint(stack_t **head, unsigned int number);
-int execute(char *content, stack_t **head, unsigned int counter, FILE *file);
-void free_stack(stack_t *head);
-void f_pop(stack_t **head, unsigned int counter);
-void f_swap(stack_t **head, unsigned int counter);
-void f_add(stack_t **head, unsigned int counter);
-void f_nop(stack_t **head, unsigned int counter);
-void f_sub(stack_t **head, unsigned int counter);
-void f_div(stack_t **head, unsigned int counter);
-void f_mul(stack_t **head, unsigned int counter);
-void f_mod(stack_t **head, unsigned int counter);
-void f_pchar(stack_t **head, unsigned int counter);
-void f_pstr(stack_t **head, unsigned int counter);
-void f_rotl(stack_t **head, unsigned int counter);
-void f_rotr(stack_t **head, __attribute__((unused)) unsigned int counter); */
-
+/* stackfunctions1 */
 void pushStack(stack_t **head, unsigned int counter);
 void pallStack(stack_t **head, unsigned int counter);
 void pintStack(stack_t **head, unsigned int counter);
 void popStack(stack_t **head, unsigned int counter);
 void swapStack(stack_t **head, unsigned int counter);
 
+/* stackfunctions2 */
 void doNothing(stack_t **head, unsigned int counter);
 void pcharStack(stack_t **head, unsigned int counter);
 void pstrStack(stack_t **head, unsigned int counter);
 void rotlStack(stack_t **head, __attribute__((unused)) unsigned int counter);
 void rotrStack(stack_t **head, __attribute__((unused)) unsigned int counter);
 
+/* stackfunctions3 */
 void freeStack(stack_t *head);
 void printTopS(stack_t **head, unsigned int counter);
 void addNode(stack_t **head, int n);
 
+/* stackoperations */
 void addStack(stack_t **head, unsigned int counter);
 void subStack(stack_t **head, unsigned int counter);
 void divStack(stack_t **head, unsigned int counter);
 void mulStack(stack_t **head, unsigned int counter);
 void modStack(stack_t **head, unsigned int counter);
 
+/* queuefunctions */
 void printTopQ(stack_t **head, unsigned int counter);
 void addQueue(stack_t **head, int n);
 
+/* executehandler */
 int execute(char *content, stack_t **stack, unsigned int counter, FILE *file);
 #endif

@@ -1,11 +1,5 @@
 #include "monty.h"
 
-void doNothing(stack_t **head, unsigned int counter);
-void pcharStack(stack_t **head, unsigned int counter);
-void pstrStack(stack_t **head, unsigned int counter);
-void rotlStack(stack_t **head, __attribute__((unused)) unsigned int counter);
-void rotrStack(stack_t **head, __attribute__((unused)) unsigned int counter);
-
 /* Task 5 implementing do Nothing */
 /**
   *doNothing - does not do anything

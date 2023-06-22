@@ -1,9 +1,5 @@
 #include "monty.h"
 
-void freeStack(stack_t *head);
-void printTopS(stack_t **head, unsigned int counter);
-void addNode(stack_t **head, int n);
-
 /**
 * freeStack - This frees a doubly linked list
 * @head: The stack head

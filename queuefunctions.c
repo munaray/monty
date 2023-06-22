@@ -1,8 +1,5 @@
 #include "monty.h"
 
-void printTopQ(stack_t **head, unsigned int counter);
-void addQueue(stack_t **head, int n);
-
 /**
  * printTopQ - This prints the top queue
  * @head: Store in the stack head

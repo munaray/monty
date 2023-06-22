@@ -1,9 +1,4 @@
 #include "monty.h"
-void pushStack(stack_t **head, unsigned int counter);
-void pallStack(stack_t **head, unsigned int counter);
-void pintStack(stack_t **head, unsigned int counter);
-void popStack(stack_t **head, unsigned int counter);
-void swapStack(stack_t **head, unsigned int counter);
 
 /* Task 0 push, pall stack */
 /**
@@ -24,13 +19,13 @@ void pushStack(stack_t **head, unsigned int counter)
 			if (bus.arg[j] > 57 || bus.arg[j] < 48)
 				flag = 1; }
 		if (flag == 1)
-		{ fprintf(stderr, "L%d: usage: push integer\n", counter);
+		{ fprintf(stderr, "L%i: usage: push integer\n", counter);
 			fclose(bus.file);
 			free(bus.content);
 			freeStack(*head);
 			exit(EXIT_FAILURE); }}
 	else
-	{ fprintf(stderr, "L%d: usage: push integer\n", counter);
+	{ fprintf(stderr, "L%i: usage: push integer\n", counter);
 		fclose(bus.file);
 		free(bus.content);
 		freeStack(*head);
@@ -58,7 +53,7 @@ void pallStack(stack_t **head, unsigned int counter)
 		return;
 	while (h)
 	{
-		printf("%d\n", h->n);
+		printf("%i\n", h->n);
 		h = h->next;
 	}
 }

@@ -1,11 +1,5 @@
 #include "monty.h"
 
-void addStack(stack_t **head, unsigned int counter);
-void subStack(stack_t **head, unsigned int counter);
-void divStack(stack_t **head, unsigned int counter);
-void mulStack(stack_t **head, unsigned int counter);
-void modStack(stack_t **head, unsigned int counter);
-
 /* Task 4 add stack */
 /**
  * addStack - adds the top two elements of the stack.
